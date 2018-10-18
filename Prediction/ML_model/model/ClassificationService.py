@@ -55,20 +55,3 @@ class ClassificationService:
         return result
 
 
-'''
-
-cs = ClassificationService()
-print cs.index_complaint_title_map
-#
-while True:
-     input = raw_input('Enter Complaint Text:')
-     # "DRAINAGE LINE COMING TO OUR PREMISES IS CHOCKED AND WATER HAS STARTED ACCUMULATING IN THE CHAMBER IN OUR NEIGHBOURS PLOT. THIS IS DUE TO THE BLOCKAGE"
-     result = cs.get_top_3_cats_with_prob(input)
-     print "\n\n"
-
-     print result
-
-     print "\n\n"
-
-
-'''
