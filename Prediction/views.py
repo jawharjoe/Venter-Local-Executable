@@ -95,7 +95,6 @@ def handle_user_selected_data(request):
                     correct_category.append(selected_category)
         csv = EditCsv(file_name, user_name, company)
         csv.write_file(correct_category)
-
         if request.POST['radio'] != "no":
             # If the user want to send the file to Google Drive
             path_folder = request.user.username + "/CSV/output/"
