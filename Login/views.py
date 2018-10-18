@@ -6,6 +6,7 @@ from django.conf import settings
 
 def user_logout(request):
     """
+    Author: Meet Shah
     source implementing logout: https://www.youtube.com/watch?v=l8f-KFxw-xU source implementing file delete: https://stackoverflow.com/questions/185936/how-to-delete-the-contents-of-a-folder-in-python
     Diff between os.unlink() and os.remove() => https://stackoverflow.com/questions/42636018/python-difference-between-os-remove-and-os-unlink-and-which-one-to-use
     """

@@ -1,6 +1,5 @@
 import tensorflow as tf
 import numpy as np
-
 from nltk.tokenize import TweetTokenizer
 import gensim
 import os

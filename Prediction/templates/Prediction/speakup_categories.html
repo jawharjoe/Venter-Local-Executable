@@ -1,70 +1,73 @@
+<!--
+Author: Shivam Sharma
+Learn Jinja Templating in Django before going to this code
+-->
+
 {% extends 'Login/header.html' %}
 {% block title %}SpeakUP Category List{% endblock %}
 {% block link %}{% url 'home' %} {% endblock %}
 {% block verified %}
-
-      <!--  <table  style="margin-left: auto; margin-right: auto;" align="center" width="75%" height=100 border="1"> -->
-<script>
-$(document).ready(function () {
+    <script>
+        $(document).ready(function () {
             table = $('#outerTable').DataTable({
                 order: [[0, "asc"]],
-                "lengthMenu": [[10,-1], [10,"All"]],
+                "lengthMenu": [[10, -1], [10, "All"]],
             });
 
         });
 
-</script>
-<div align="center" id="tableDiv" STYLE="width: 90%; margin:auto">
-    <table id="outerTable" class="table table-striped table-bordered" style="background: white;">
-        <thead>
-        <th>English Category</th>
-        </thead>
+    </script>
+    <div align="center" id="tableDiv" STYLE="width: 90%; margin:auto">
+        <table id="outerTable" class="table table-striped table-bordered" style="background: white;">
+            <thead>
+            <th>English Category</th>
+            </thead>
 
-        <tbody>
-        <tr>
-            <td> Delay in delivery</td>
-        </tr>
-        <tr>
-            <td> Wrong charges/Over charge</td>
-        </tr>
-        <tr>
-            <td>Consumer extremely frustated</td>
-        </tr>
-        <tr>
-            <td>Porting issues</td>
-        </tr>
-        <tr>
-            <td>Wrong/Faulty product</td>
-        </tr>
-        <tr>
-            <td>Payment Gateway failure</td>
-        </tr>
-        <tr>
-            <td>Internet issues</td>
-        </tr>
-        <tr>
-            <td>ATM related</td>
-        </tr>
-        <tr>
-            <td>Bad experience</td>
-        </tr>
-        <tr>
-            <td>Bad food</td>
-        </tr>
-        <tr>
-            <td>Staff Behaviour</td>
-        </tr>
-        <tr>
-            <td>Refund issues</td>
-        </tr>
-        <tr>
-            <td>Wrong charges</td>
-        </tr>
-        <tr>
-            <td>No Signal/Unable to use</td>
-        </tr>
+            <tbody>
+            <tr>
+                <td> Delay in delivery</td>
+            </tr>
+            <tr>
+                <td> Wrong charges/Over charge</td>
+            </tr>
+            <tr>
+                <td>Consumer extremely frustated</td>
+            </tr>
+            <tr>
+                <td>Porting issues</td>
+            </tr>
+            <tr>
+                <td>Wrong/Faulty product</td>
+            </tr>
+            <tr>
+                <td>Payment Gateway failure</td>
+            </tr>
+            <tr>
+                <td>Internet issues</td>
+            </tr>
+            <tr>
+                <td>ATM related</td>
+            </tr>
+            <tr>
+                <td>Bad experience</td>
+            </tr>
+            <tr>
+                <td>Bad food</td>
+            </tr>
+            <tr>
+                <td>Staff Behaviour</td>
+            </tr>
+            <tr>
+                <td>Refund issues</td>
+            </tr>
+            <tr>
+                <td>Wrong charges</td>
+            </tr>
+            <tr>
+                <td>No Signal/Unable to use</td>
+            </tr>
 
-        </tbody>
-    </table>
-</div>
+            </tbody>
+        </table>
+    </div>
 {% endblock %}

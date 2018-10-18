@@ -13,8 +13,6 @@ html, body {
     font-size: 20px;
 }
 
-/* Submit CSV file page */
-
 /*Login Page*/
 .w3ls-login {
     display: -webkit-flex;
@@ -29,7 +27,6 @@ html, body {
     -moz-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
-    justify-content: center;
 }
 
 h1 {
@@ -136,8 +133,6 @@ label.check {
     background: #000;
     color: #fff;
 }
-
-/*Login Page*/
 
 /* Style inputs with type="text", select elements and textareas */
 input, textarea {

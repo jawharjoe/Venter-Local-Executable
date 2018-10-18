@@ -1,12 +1,8 @@
 import tensorflow as tf
 import pickle
 import numpy as np
-
 from numpy import linalg as la
-# from tensorflow.contrib.tensorboard.plugins import projector
 from nltk.tokenize import TweetTokenizer
-
-# Added by Meet shah
 from django.conf import settings
 
 

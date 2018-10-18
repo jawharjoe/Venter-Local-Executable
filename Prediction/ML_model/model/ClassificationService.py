@@ -1,9 +1,6 @@
 import numpy as np
-
 import pandas as pd
-
 from .ImportGraph import ImportGraph
-
 import os
 from django.conf import settings
 
@@ -53,5 +50,3 @@ class ClassificationService:
         for i in range(len(final_categories)):
             result[final_categories[i]] = final_probability[i]
         return result
-
-

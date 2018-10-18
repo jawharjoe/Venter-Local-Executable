@@ -1,5 +1,5 @@
 """
-Author = Meet Shah (a.k.a slim_shah)
+Author = Meet Shah
 
 Date:    03/04/2018
 
