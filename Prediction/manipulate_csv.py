@@ -123,13 +123,13 @@ class EditCsv:
                        encoding='utf-8', index=False)
 
         # Making difference file to upload to the Google drive
-        csvfile = pd.read_csv(os.path.join(settings.MEDIA_ROOT, self.username, "CSV", "input", "Difference.csv"),
+        csvfile = pd.read_csv(os.path.join(settings.MEDIA_ROOT, self.username, "CSV", "output", "Difference.csv"),
                               sep=',',
                               header=0)
         csvfile.insert(loc=0, column='Chosen_category', value=correct_category)
 
         csvfile.to_csv(
-            os.path.join(settings.MEDIA_ROOT, self.username, "CSV", "input", "Difference of " + self.filename),
+            os.path.join(settings.MEDIA_ROOT, self.username, "CSV", "output", "Difference of " + self.filename),
             sep=',',
             encoding='utf-8', index=False)
 
@@ -209,7 +209,7 @@ class EditCsv:
         df = pd.DataFrame({'Predicted category 1': cat1, 'Predicted category 2': cat2, 'Predicted category 3': cat3,
                            'Complaint Description': description})
 
-        df.to_csv(os.path.join(settings.MEDIA_ROOT, self.username, "CSV", "input", "Difference.csv"), sep=',',
+        df.to_csv(os.path.join(settings.MEDIA_ROOT, self.username, "CSV", "output", "Difference.csv"), sep=',',
                   encoding='utf-8', index=False)
 
         # After doing everything, don't forget to delete the object reference of the ClassificationService class

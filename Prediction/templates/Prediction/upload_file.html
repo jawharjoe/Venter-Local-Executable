@@ -27,13 +27,32 @@ Learn Jinja Templating in Django before going to this code
                 {{ Error }}
             </div>
         {% endif %}
-        <h3> Upload CSV file here</h3>
+        <h3><div class="font"><font color="#78A05A"> Upload CSV file here</font></div></h3>
         <form action="" method="post" enctype="multipart/form-data">
-            <div class="container_form">
+            <div class="landingtext">
                 {% csrf_token %}
                 {{ form.as_p }}
+                <p><font color="white">Note: Make sure the complaints don't exceed 5000 rows.</font></p>
                 <input type="submit" value="Submit" onclick="showLoading()">
             </div>
         </form>
     </div>
+    <style>
+        .landingtext {
+            background: rgba(143, 143, 143, 0.80);
+            padding: 15px;
+            width: 65%;
+            text-align: left;
+            border-radius: 25px;
+            font-size: 20px;
+        }
+        .font{
+        font-family: 'Montserrat', sans-serif;
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        }
+    </style>
 {% endblock %}

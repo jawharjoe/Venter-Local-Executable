@@ -24,7 +24,7 @@ SECRET_KEY = 'p!63vi=_4)o5h8k0ep4uy2e6ou^k$9wels#e&&x=^^!=$xa21o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["https://venteriitb.azurewebsites.net","*"]
 
 # Application definition
 
@@ -54,7 +54,7 @@ ROOT_URLCONF = 'Venter.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'CategoryPrediction/../Login/templates')]
+        'DIRS': []
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -110,10 +110,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-STATIC_ROOT = 'static'
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "/Login/static"),
+    os.path.join(BASE_DIR, "./Login/static"),
 ]
 
 LOGIN_REDIRECT_URL = 'home'

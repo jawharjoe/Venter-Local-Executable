@@ -57,7 +57,7 @@ def upload_file(request):
                     return render(request, 'Prediction/predict_categories.html',
                                   context)  # Sending the data in the Frontend to display
                 else:
-                    # If the header_flag is false, delete the object of EditCsv and raise an error
+                    # If the header_flag is false, delete the Input file
                     csv.delete()
                     form = upload_file_form()  # Reinitialize the upload_file_form
                     return render(request, 'Prediction/upload_file.html',
@@ -85,7 +85,13 @@ def handle_user_selected_data(request):
                 selected_category = request.POST.getlist('select_category' + str(i) + '[]')
                 if request.POST['other_category' + str(i)]:
                     # To get a better picture of what we are getting try to print "request.POST.['other_category' + str(i)]", request.POST['other_category' + str(i)
+                    # others_list=request.POST['other_category' + str(i)]
+                    # for element in others_list:
+                    #     print(element)
+                    #     tuple = (selected_category,element)
                     tuple = (selected_category, request.POST['other_category' + str(i)])
+                    # print(request.POST['other_category' + str(i)])
+                    # print(tuple)
                     # So here the correct_category will be needing a touple so the data will be like:
                     # [(selected_category1, selected_category2), (other_category1, other_category2)] This will be the output of the multi select
                     correct_category.append(tuple)

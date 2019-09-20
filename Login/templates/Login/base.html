@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css"
           href="{% static 'DataTables/DataTables-1.10.18/css/dataTables.bootstrap.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
 </head>
 <body>
 <div id="container">
@@ -44,9 +45,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{% block link %}{% endblock %}">Venter</a>
+                    <a class="navbar-brand" href="{% block link %}{% endblock %}"><img src="/static/images/new.png"></a>
                 </div>
-
                 {% block logout %}{% endblock %}
                 <!--Item-->
 
@@ -61,8 +61,9 @@
     </div>
     <div id="footer">
         <div class="copy-wthree">
-            <p>© 2018 Venter . All Rights Reserved | Design by
-                <a href="http://www.iitb.ac.in/" target="_blank">IIT Bombay, Powai</a>
+
+            <p><font color="white">© 2018 Venter . All Rights Reserved | Design by</font>
+                <a href="http://www.iitb.ac.in/" target="_blank"><font color="white">IIT Bombay, Powai</font></a>
             </p>
         </div>
     </div>

@@ -40,25 +40,62 @@
 {% endblock %}
 {% block tabs %}
     {% if user.is_authenticated %}
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" href="{% url 'predict' %}">Category Prediction Model</a>
-            </li>
-        </ul>
+        <br><font color="white">
+        <a class="btn btn-info" type="button" href="{% url 'predict' %}" style="float: right;" > Category Prediction Model </a>
+        </font>
     {% endif %}
 {% endblock %}
 {% block content %}
     {% if user.is_authenticated %}
         {% block verified %}{% endblock %}
-    {% else %}
-        <div class="alert alert-danger alert-dismissible fade in">
-            <strong>Warning!</strong>
-            <p>You are not logged in</p>
+    {% else %}<br>
+    <div class="landingtext"><img src="/static/images/new.png"><font color="white" size="5px">
+        <div class="font"><h2>VENTER</h2></div>
+        <div class="content">
+        Venter is an automated complaint management system being developed at IIT Bombay, in collaboration with Microsoft Research.
+        The goal of this project is to automate the processes involved in the categorisation of complaints registered on the
+        website of ICMC (I Change My City) which are further referred to MCGM (Municipal Corporation of Greater Mumbai) website.
+        Currently, the complaints on MCGM are posted by users, but the categorization of those complaints is done manually,
+        which not only consumes time, but increases chances of errors due to human intervention.
+        <br><br>
+        Venter is based on a machine learning model, which is trained to classify the results based upon the traits
+        discovered in the csv that's been uploaded by the user.
         </div>
-        <a href="{% url 'login' %}">
+        </font><br>
+
+    <style>
+        h2{
+            text-align: center;
+            color:#78A05A;
+            font-size:40px;
+        }
+        .content{
+            text-align: left;
+            font-size:18px;
+         }
+        .landingtext {
+            background: rgba(143, 143, 143, 0.7);
+            padding: 15px;
+            width: 65%;
+            text-align: center;
+            margin: auto;
+            border-radius: 25px;
+        }
+        .font{
+        font-family: 'Montserrat', sans-serif;
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        }
+    </style>
+        <br><a href="{% url 'login' %}">
             <p align="center">
                 <button>Login</button>
             </p>
         </a>
+        <br>
+    </div>
     {% endif %}
 {% endblock %}
